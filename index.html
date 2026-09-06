@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmley Lemon Chilli Makhana — Crunch + Zest</title>
+<meta name="description" content="Farmley Lemon Chilli Roasted Makhana. Roasted in olive oil, loaded with lemon and chilli, built for guilt-free crunch.">
+<link rel="stylesheet" href="./globals.css">
+</head>
+<body>
+
+<!-- ============================================================ NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__mark"><span class="dot"></span>Farmley</a>
+  <ul class="nav__links">
+    <li><a href="#crunch-lab">Crunch Lab</a></li>
+    <li><a href="#mixer">Flavour Mixer</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#buy">Get a Can</a></li>
+  </ul>
+  <a class="nav__cta" id="navBuy" href="#buy">Buy the Can</a>
+  <button class="nav__toggle" id="mnavOpen" aria-label="Open menu">☰</button>
+</nav>
+
+<div class="mnav" id="mnav">
+  <div class="mnav__top"><button class="mnav__close" id="mnavClose" aria-label="Close menu">✕</button></div>
+  <ul>
+    <li><a href="#crunch-lab">Crunch Lab</a></li>
+    <li><a href="#mixer">Flavour Mixer</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#buy">Get a Can</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================ HERO -->
+<header class="hero" id="top">
+  <div class="hero__grain"></div>
+  <div class="hero__field" id="heroField"></div>
+
+  <div class="hero__inner">
+    <div>
+      <span class="hero__eyebrow"><span class="zig">🌶️</span> Roasted in olive oil, not fried</span>
+      <h1 class="hero__headline">
+        MAKHANA
+        <span class="flavour">GOT <span class="chilli-word">ZESTY</span>.</span>
+      </h1>
+      <p class="hero__sub">
+        Farmley Lemon Chilli Makhana — a fistful of roasted foxnuts hit with
+        citrus and heat. Move your cursor over the can. It's paying attention.
+      </p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#buy">Get a Can →</a>
+        <a class="btn btn--ghost" href="#crunch-lab">Try the Crunch Lab</a>
+      </div>
+
+      <div class="hero__meter">
+        <div class="meter" data-meter>
+          <span class="meter__label">Crunch</span>
+          <div class="meter__bar"><div class="meter__fill meter__fill--crunch" style="--val:.92"></div></div>
+        </div>
+        <div class="meter" data-meter>
+          <span class="meter__label">Zest</span>
+          <div class="meter__bar"><div class="meter__fill meter__fill--zest" style="--val:.8"></div></div>
+        </div>
+        <div class="meter" data-meter>
+          <span class="meter__label">Heat</span>
+          <div class="meter__bar"><div class="meter__fill meter__fill--heat" style="--val:.65"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage" id="stage">
+      <div class="stage__orbit" id="orbit"></div>
+      <div class="can" id="heroCan" tabindex="0" role="button" aria-label="Tilt the Farmley can, follow your cursor">
+        <!-- CAN SVG -->
+        <svg viewBox="0 0 300 520" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#0E2B1F"/>
+              <stop offset=".45" stop-color="#1B4332"/>
+              <stop offset=".55" stop-color="#215a41"/>
+              <stop offset="1" stop-color="#0E2B1F"/>
+            </linearGradient>
+            <linearGradient id="lidGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFDD4A"/>
+              <stop offset="1" stop-color="#E8AE0E"/>
+            </linearGradient>
+            <radialGradient id="logoGrad" cx=".5" cy=".4" r=".7">
+              <stop offset="0" stop-color="#FFE873"/>
+              <stop offset="1" stop-color="#F5C218"/>
+            </radialGradient>
+          </defs>
+
+          <!-- body -->
+          <rect x="35" y="90" width="230" height="390" rx="14" fill="url(#bodyGrad)"/>
+          <!-- base rim -->
+          <rect x="30" y="466" width="240" height="26" rx="8" fill="#c9c9c9"/>
+          <rect x="30" y="466" width="240" height="10" rx="5" fill="#e9e9e9"/>
+
+          <!-- lid -->
+          <ellipse cx="150" cy="90" rx="115" ry="26" fill="url(#lidGrad)"/>
+          <rect x="35" y="66" width="230" height="30" fill="url(#lidGrad)"/>
+          <ellipse cx="150" cy="66" rx="115" ry="24" fill="#FFE873"/>
+          <ellipse cx="150" cy="64" rx="98" ry="16" fill="#0E2B1F" opacity=".08"/>
+
+          <!-- QR-ish ind mark -->
+          <rect x="222" y="112" width="26" height="26" rx="4" fill="#fff" opacity=".9"/>
+          <text x="235" y="130" font-size="13" text-anchor="middle" fill="#0E2B1F" font-family="Inter, sans-serif" font-weight="700">A</text>
+
+          <!-- logo blob -->
+          <ellipse cx="140" cy="175" rx="80" ry="46" fill="url(#logoGrad)"/>
+          <text x="140" y="187" font-size="34" text-anchor="middle" fill="#1B4332" font-family="'Baloo 2', sans-serif" font-weight="700">Farmley</text>
+
+          <!-- flavour bar -->
+          <rect x="55" y="240" width="190" height="3" fill="#F5C218"/>
+          <text x="150" y="270" font-size="20" text-anchor="middle" fill="#FFE873" font-family="'Baloo 2', sans-serif" font-weight="600" letter-spacing="2">LEMON CHILLI</text>
+          <text x="150" y="305" font-size="30" text-anchor="middle" fill="#FFF8E4" font-family="'Baloo 2', sans-serif" font-weight="800" letter-spacing="1">MAKHANA</text>
+          <rect x="55" y="322" width="190" height="3" fill="#F5C218"/>
+
+          <!-- small claim icons row -->
+          <g fill="#cfe6d6" font-family="Inter, sans-serif" font-size="10" font-weight="600">
+            <circle cx="65" cy="352" r="9" fill="none" stroke="#cfe6d6" stroke-width="1.4"/>
+            <text x="80" y="356">Roasted in olive oil</text>
+            <circle cx="65" cy="378" r="9" fill="none" stroke="#cfe6d6" stroke-width="1.4"/>
+            <text x="80" y="382">Trans fat free</text>
+            <circle cx="65" cy="404" r="9" fill="none" stroke="#cfe6d6" stroke-width="1.4"/>
+            <text x="80" y="408">Plant protein</text>
+          </g>
+
+          <!-- puffs illustration -->
+          <g transform="translate(150,440)">
+            <circle cx="0" cy="0" r="20" fill="#E8A94A"/>
+            <circle cx="-8" cy="-6" r="3" fill="#B23A2E"/>
+            <circle cx="10" cy="4" r="2.4" fill="#B23A2E"/>
+          </g>
+
+          <!-- shine -->
+          <rect x="55" y="90" width="18" height="380" fill="#ffffff" opacity=".06"/>
+        </svg>
+      </div>
+      <div class="stage__hint"><span class="arrow">↔</span> move your cursor · click the can</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ CRUNCH LAB -->
+<section class="section lab" id="crunch-lab">
+  <div class="wrap">
+    <div class="lab__grid">
+      <div class="lab__copy reveal">
+        <span class="section-kicker">Interactive</span>
+        <h2 class="section-title">The Crunch Lab</h2>
+        <p class="section-desc">Every makhana here is clickable. Pop them one by one — or as fast as you can — and watch the counter climb. This is the closest a screen gets to an actual crunch.</p>
+        <ul class="lab__list">
+          <li>Click or tap a foxnut to pop it</li>
+          <li>Crumbs scatter on every pop</li>
+          <li>Board refills once it's empty</li>
+          <li>Your best streak is tracked live</li>
+        </ul>
+      </div>
+
+      <div class="lab__board" id="labBoard">
+        <div class="lab__counter">
+          <b id="crunchCount">0</b>
+          <span>crunches</span>
+        </div>
+        <button class="lab__reset" id="labReset">Refill board</button>
+        <!-- makhana pieces injected by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FLAVOUR MIXER -->
+<section class="section mixer" id="mixer">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">Play with it</span>
+      <h2 class="section-title">Build your own balance</h2>
+      <p class="section-desc">Every can is a fixed ratio of citrus and heat. Slide these to see how the balance shifts — and where Farmley actually lands.</p>
+    </div>
+
+    <div class="mixer__grid">
+      <div class="mixer__panel reveal">
+        <div class="slider-row">
+          <div class="slider-row__label">
+            <span>🍋 Zest</span>
+            <span class="val" id="zestVal">65%</span>
+          </div>
+          <input type="range" id="zestRange" min="0" max="100" value="65">
+        </div>
+        <div class="slider-row">
+          <div class="slider-row__label">
+            <span>🌶️ Heat</span>
+            <span class="val" id="heatVal">55%</span>
+          </div>
+          <input type="range" id="heatRange" min="0" max="100" value="55">
+        </div>
+        <div class="mixer__verdict" id="mixerVerdict">Balanced — that's roughly the Farmley ratio.</div>
+      </div>
+
+      <div class="mixer__jar reveal">
+        <svg id="jarSvg" viewBox="0 0 300 300">
+          <defs>
+            <clipPath id="jarClip"><circle cx="150" cy="150" r="140"/></clipPath>
+          </defs>
+          <circle cx="150" cy="150" r="140" fill="#0E2B1F"/>
+          <g clip-path="url(#jarClip)">
+            <circle id="zestBlob" cx="115" cy="150" r="120" fill="#F5C218" opacity="0.85"/>
+            <circle id="heatBlob" cx="185" cy="150" r="120" fill="#E63946" opacity="0.85" style="mix-blend-mode:multiply"/>
+          </g>
+          <circle cx="150" cy="150" r="140" fill="none" stroke="#FFF8E4" stroke-width="4" opacity=".25"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ NUTRITION -->
+<section class="section nutri" id="nutrition">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">The fine print, made legible</span>
+      <h2 class="section-title">What's actually in the can</h2>
+      <p class="section-desc">Per 100 g. No surprises, no fried oil, no trans fat.</p>
+    </div>
+
+    <div class="nutri__grid">
+      <table class="nutri__table reveal" id="nutriTable" aria-label="Nutrition information per 100 grams"></table>
+
+      <div class="reveal">
+        <h3 style="color:var(--cream); font-size:1.2rem; margin-bottom:16px;">Ingredients</h3>
+        <div class="ingredient-cloud" id="ingredientCloud"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PACK / BUY -->
+<section class="section pack" id="buy">
+  <div class="wrap">
+    <div class="pack__grid">
+      <div class="pack__visual reveal">
+        <div class="can" id="packCan"></div>
+      </div>
+
+      <div class="pack__card reveal">
+        <span class="section-kicker">Take it home</span>
+        <h2 class="section-title" style="margin-bottom:6px;">Farmley Lemon Chilli Makhana</h2>
+        <p class="section-desc" style="margin-bottom:0;">Roasted in olive oil. Guilt-free snacking, built for people who still want flavour.</p>
+
+        <div class="pack__sizes" id="packSizes"></div>
+
+        <div class="pack__price-row">
+          <span class="pack__price" id="packPrice">Price varies</span>
+          <span class="pack__weight" id="packWeight">77 g pack</span>
+        </div>
+
+        <div class="pack__buy-row">
+          <a class="btn btn--primary" id="buyBlinkit" href="#" target="_blank" rel="noopener">Buy on Blinkit →</a>
+          <a class="btn btn--ghost" id="buyFarmley" href="#" target="_blank" rel="noopener">See all flavours on Farmley.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h4>Farmley</h4>
+        <p style="max-width:34ch; color:rgba(255,248,228,.55);">Roasted, not fried. Lemon Chilli Makhana is part of Farmley's flavoured foxnut range.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#crunch-lab">Crunch Lab</a></li>
+          <li><a href="#mixer">Flavour Mixer</a></li>
+          <li><a href="#nutrition">Nutrition</a></li>
+          <li><a id="footFarmley" href="#" target="_blank" rel="noopener">Official Farmley collection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Buy &amp; support</h4>
+        <ul>
+          <li><a id="footBlinkit" href="#" target="_blank" rel="noopener">Buy on Blinkit</a></li>
+          <li id="footEmail"></li>
+          <li id="footFssai"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span id="footOrigin"></span>
+      <span id="footShelf"></span>
+    </div>
+    <p class="footer__disclaimer" id="footDisclaimer"></p>
+  </div>
+</footer>
+
+<script src="./product.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
